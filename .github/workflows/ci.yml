@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate HTML
+        uses: anishathalye/proof-html@v2
+        with:
+          directory: ./
+          check_html: true
+          check_img_http: false
+          enforce_https: false
+
+      - name: Check JSON validity
+        run: |
+          echo "Checking config.json..."
+          python3 -m json.tool config.json > /dev/null
+          echo "Checking sprints.json..."
+          python3 -m json.tool sprints.json > /dev/null
+          echo "All JSON files are valid!"
+
+      - name: Check CSV headers
+        run: |
+          echo "Checking backlog.csv..."
+          head -1 backlog.csv | grep -q "id,category,title" || (echo "Invalid backlog.csv header" && exit 1)
+          echo "Checking current_sprint.csv..."
+          head -1 current_sprint.csv | grep -q "id,title,category,status" || (echo "Invalid current_sprint.csv header" && exit 1)
+          echo "All CSV files have valid headers!"
+
+      - name: Verify no hardcoded paths
+        run: |
+          echo "Checking for hardcoded absolute paths..."
+          if grep -r "/Users/" index.html config.json 2>/dev/null; then
+            echo "Found hardcoded paths - please remove!"
+            exit 1
+          fi
+          echo "No hardcoded paths found!"

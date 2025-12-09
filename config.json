@@ -1,0 +1,66 @@
+{
+  "project": {
+    "name": "Agile GenAI",
+    "title": "Agile GenAI Sprint Dashboard",
+    "description": "CSV-based agile task management for AI-assisted development"
+  },
+  "files": {
+    "backlog": "backlog.csv",
+    "currentSprint": "current_sprint.csv",
+    "completedTasks": "completed_tasks.csv",
+    "sprints": "sprints.json"
+  },
+  "ui": {
+    "showStats": true,
+    "showBacklog": false,
+    "defaultView": "kanban",
+    "defaultTheme": "dark"
+  },
+  "theme": {
+    "dark": {
+      "bgPrimary": "#0f1419",
+      "bgSecondary": "#1a1f3a",
+      "accentPrimary": "#667eea",
+      "accentSecondary": "#00d4ff"
+    },
+    "light": {
+      "bgPrimary": "#f5f7fa",
+      "bgSecondary": "#ffffff",
+      "accentPrimary": "#5a67d8",
+      "accentSecondary": "#0099cc"
+    }
+  },
+  "team": {
+    "roles": [
+      "Product Owner",
+      "Scrum Master",
+      "Developer",
+      "Designer",
+      "AI Agent",
+      "Unassigned"
+    ],
+    "categories": [
+      "Backend",
+      "Frontend",
+      "Integration",
+      "Testing",
+      "Security",
+      "Documentation",
+      "DevOps",
+      "Design",
+      "Configuration",
+      "Core",
+      "Feature",
+      "Community",
+      "UI",
+      "Release",
+      "Cleanup"
+    ],
+    "priorities": [
+      "critical",
+      "high",
+      "medium",
+      "low"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+# Agile GenAI - Git Ignore
+.DS_Store
+# User's agile management folder (created by setup.sh)
+# This is user-specific data, not part of the distribution
+agile/
+
+# Claude Code internal folder
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
