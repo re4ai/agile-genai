@@ -1,1 +1,31 @@
 id,category,title,description,priority,phase,status,estimate_hours,owner
+TECH-1A-001,Backend,Extend LegalAgent with Placeholder Document Generation,"Create DocumentGenerationService with placeholder documents for buyer and seller flows","critical",Phase 1A,completed,4,Moshe Beeri
+TECH-1A-002,Backend,Implement LawyerVerificationAgent & Canvas,"Create LawyerVerificationAgent and matching Canvas component for identity verification","critical",Phase 1A,completed,4,Moshe Beeri
+TECH-1A-003,Frontend,Build DocumentSigningCanvas with Sequential Signing,"Create DocumentSigningCanvas extending PropertyDocumentsCanvas with sequential signing workflow","critical",Phase 1A,completed,5,Moshe Beeri
+TECH-1A-004,Frontend,Create PaymentAndTaxFormsCanvas,"Build PaymentFormsCanvas for payment proof and tax form collection","high",Phase 1A,completed,3,Moshe Beeri
+TECH-1A-005,Backend,Implement Settlement & Ownership Distribution Service,"Create SettlementAndDistributionService for automatic fractional ownership distribution","critical",Phase 1A,completed,5,Moshe Beeri
+TECH-1A-006,Backend,Build Selling Flow with PropertyListingCanvas Extensions,"Extend SellingAgent and create selling-side canvas flow mirroring buyer flow","high",Phase 1A,completed,5,Moshe Beeri
+TECH-1A-007,Integration,Integrate Buying & Selling Flows with Canvas Routing,"Integrate all canvas components with routing and orchestration","high",Phase 1A,completed,4,Moshe Beeri
+TECH-1A-008,Testing,End-to-End Testing & Refinement,"Complete end-to-end testing of buying and selling flows","high",Phase 1A,completed,4,Moshe Beeri
+TECH-2-001,Backend,Real DocuSign Integration,"DocuSignService with JWT auth - envelope creation - embedded signing","high",Phase 2,completed,8,Moshe Beeri
+TECH-2-002,Backend,Goldfarb Legal Templates Integration,"LegalTemplateService with 4 document types - DocuSign anchor tags","high",Phase 2,completed,8,Moshe Beeri
+TECH-2-003,Backend,Lawyer Verification Demo Mode,"LawyerVerificationService with demo mode - user plays lawyer role","high",Phase 2,completed,6,Moshe Beeri
+TECH-2-004,Backend,Payment Gateway (Stripe Sandbox),"StripePaymentService with mock mode - PaymentAgent - test card support","high",Phase 2,completed,6,Moshe Beeri
+TECH-2-005,Integration,Wire LawyerVerificationCanvas to Agent,"Connect canvas to LawyerVerificationAgent - demo mode with lawyer URLs","critical",Phase 2,completed,4,Moshe Beeri
+TECH-2-006,Integration,Wire PaymentCanvas to Stripe Agent,"Connect canvas to PaymentAgent - Stripe checkout - fee display","critical",Phase 2,completed,5,Moshe Beeri
+TECH-2-007,Integration,Wire DocumentSigningCanvas to DocuSign,"Connect canvas to LegalAgent - embedded DocuSign signing","critical",Phase 2,completed,5,Moshe Beeri
+TECH-3-001,Testing,E2E Buyer Flow Testing,"Test complete buyer journey - property search to ownership transfer","critical",Phase 3,completed,4,Moshe Beeri
+TECH-3-002,Testing,E2E Seller Flow Testing,"Test complete seller journey - listing to sale completion","critical",Phase 3,completed,4,Moshe Beeri
+TECH-3-003,Testing,DocuSign Integration Testing,"Test real DocuSign signing flow with sandbox credentials","high",Phase 3,completed,3,Moshe Beeri
+TECH-3-004,Testing,Stripe Payment Testing,"Test Stripe checkout with test cards - success and failure scenarios","high",Phase 3,completed,3,Moshe Beeri
+TECH-3-005,Backend,Error Handling & Recovery,"Add error boundaries - retry logic - graceful degradation","critical",Phase 3,completed,5,Moshe Beeri
+TECH-3-006,Backend,Logging & Monitoring,"Add structured logging - Firebase monitoring - error tracking","high",Phase 3,completed,4,Moshe Beeri
+TECH-3-007,Security,Security Review,"Review auth flows - API security - data validation - OWASP checks","critical",Phase 3,completed,4,Moshe Beeri
+TECH-3-008,Documentation,Demo Script & Documentation,"Create investor demo script and flow documentation","high",Phase 3,completed,3,Moshe Beeri
+TECH-4-001,Feature,Video Conferencing for Lawyer Verification,"Integrate Daily.co or Twilio for real video calls","medium",Phase 4,pending,8,Moshe Beeri
+TECH-4-002,Feature,Secondary Market Implementation,"Build order book and fraction trading functionality","medium",Phase 4,pending,10,Moshe Beeri
+TECH-4-003,Feature,Advanced Analytics,"Implement portfolio analytics and performance tracking","medium",Phase 4,pending,8,Moshe Beeri
+TECH-5-001,Testing,Comprehensive Test Suite,"Unit and integration tests for all components","high",Phase 5,pending,16,Moshe Beeri
+TECH-5-002,Security,Security Audit,"Full security audit and penetration testing","critical",Phase 5,pending,12,Moshe Beeri
+TECH-6-001,Deployment,Production Deployment,"Deploy to production Firebase","critical",Phase 6,pending,8,Moshe Beeri
+TECH-6-002,Documentation,Complete Documentation,"API, agent workflow, and operational documentation","medium",Phase 6,pending,8,Moshe Beeri

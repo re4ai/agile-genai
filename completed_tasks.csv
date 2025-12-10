@@ -1,1 +1,33 @@
 id,title,category,phase,completed_date,actual_hours,owner,notes
+TECH-001,Setup Next.js Project & Development Environment,Frontend,Phase 1,2025-11-25,3,Moshe Beeri,Leveraged existing Next.js 14 + Firebase infrastructure
+TECH-002,Create Mock Data Models & Sample Data,Backend,Phase 1,2025-11-25,4,Moshe Beeri,Comprehensive mock data layer with 9 properties and 8 users
+TECH-003,Build Property Discovery & Search Component,Frontend,Phase 1,2025-11-25,6,Moshe Beeri,Advanced filtering and sorting with responsive design
+TECH-004,Build Property Details Page with AI Analysis,Frontend,Phase 1,2025-11-25,5,Moshe Beeri,Comprehensive property analysis and metrics display
+TECH-005,Build Fractional Ownership Selection Component,Frontend,Phase 1,2025-11-30,5,Moshe Beeri,Multi-step wizard with validation and compliance info
+TECH-006,Build Legal Document Review & Signing Flow,Frontend,Phase 1,2025-11-30,6,Moshe Beeri,Multi-document signing with progress tracking
+TECH-007,Build Payment & Transaction Confirmation,Frontend,Phase 1,2025-11-30,4,Moshe Beeri,Payment method selection with 3 options and dynamic fees
+TECH-008,Build Portfolio & Document Management Dashboard,Frontend,Phase 1,2025-11-30,6,Moshe Beeri,Full portfolio management with holdings and documents
+TECH-009,Polish Test & Optimize Demo,Testing,Phase 1,2025-11-30,4,Moshe Beeri,End-to-end flow validation and optimization
+TECH-1A-001,Extend LegalAgent with Placeholder Document Generation,Backend,Phase 1A,2025-12-09,4,Moshe Beeri,Document generation with 3 templates (Purchase Agreement, Disclosure, Fractional Terms)
+TECH-1A-002,Implement LawyerVerificationAgent & Canvas,Backend,Phase 1A,2025-12-09,4,Moshe Beeri,Mock video verification with 5-second auto-completion and identity approval
+TECH-1A-003,Build DocumentSigningCanvas with Sequential Signing,Frontend,Phase 1A,2025-12-09,5,Moshe Beeri,Sequential signing enforcing order - cannot skip documents
+TECH-1A-004,Create PaymentAndTaxFormsCanvas,Frontend,Phase 1A,2025-12-09,3,Moshe Beeri,Payment proof upload (wire/escrow) and W-9 tax form collection
+TECH-1A-005,Implement Settlement & Ownership Distribution Service,Backend,Phase 1A,2025-12-09,5,Moshe Beeri,SettlementService with verification and atomic ownership transfer
+TECH-1A-006,Build Selling Flow with PropertyListingCanvas Extensions,Backend,Phase 1A,2025-12-09,5,Moshe Beeri,SellerDashboardCanvas with holdings and sell order creation
+TECH-1A-007,Integrate Buying & Selling Flows with Canvas Routing,Integration,Phase 1A,2025-12-09,4,Moshe Beeri,PurchaseFlowOrchestrator for buyer/seller canvas transitions
+TECH-1A-008,End-to-End Testing & Refinement,Testing,Phase 1A,2025-12-09,4,Moshe Beeri,Test checklist documentation for buyer and seller happy paths
+TECH-2-001,Real DocuSign Integration,Backend,Phase 2,2025-12-09,8,Moshe Beeri,DocuSignService with JWT auth - envelope creation - embedded signing - status tracking - webhook support
+TECH-2-002,Goldfarb Legal Templates Integration,Backend,Phase 2,2025-12-09,8,Moshe Beeri,LegalTemplateService with 4 document types (purchase agreement - disclosure - fractional terms - transfer) with DocuSign anchor tags
+TECH-2-003,Lawyer Verification Demo Mode,Backend,Phase 2,2025-12-09,6,Moshe Beeri,LawyerVerificationService with demo mode - user plays lawyer role - session tracking in Firestore
+TECH-2-004,Payment Gateway (Stripe Sandbox),Backend,Phase 2,2025-12-09,6,Moshe Beeri,StripePaymentService with mock mode - PaymentAgent - test card support - fee calculation
+TECH-2-005,Wire LawyerVerificationCanvas to Agent,Integration,Phase 2,2025-12-09,4,Moshe Beeri,Connected canvas to LawyerVerificationAgent with demo mode and lawyer URLs
+TECH-2-006,Wire PaymentCanvas to Stripe Agent,Integration,Phase 2,2025-12-09,5,Moshe Beeri,Connected canvas to PaymentAgent with Stripe checkout and fee display
+TECH-2-007,Wire DocumentSigningCanvas to DocuSign,Integration,Phase 2,2025-12-09,5,Moshe Beeri,Connected canvas to LegalAgent with embedded DocuSign signing
+TECH-3-001,E2E Buyer Flow Testing,Testing,Phase 3,2025-12-10,4,Moshe Beeri,Test complete buyer journey - property search to ownership transfer
+TECH-3-002,E2E Seller Flow Testing,Testing,Phase 3,2025-12-10,4,Moshe Beeri,Test complete seller journey - listing to sale completion
+TECH-3-003,DocuSign Integration Testing,Testing,Phase 3,2025-12-10,3,Moshe Beeri,Test real DocuSign signing flow with sandbox credentials
+TECH-3-004,Stripe Payment Testing,Testing,Phase 3,2025-12-10,3,Moshe Beeri,Test Stripe checkout with test cards - success and failure scenarios
+TECH-3-005,Error Handling & Recovery,Backend,Phase 3,2025-12-10,5,Moshe Beeri,Added error boundaries - retry logic - graceful degradation
+TECH-3-006,Logging & Monitoring,Backend,Phase 3,2025-12-10,4,Moshe Beeri,Added structured logging - Firebase monitoring - error tracking
+TECH-3-007,Security Review,Security,Phase 3,2025-12-10,4,Moshe Beeri,Reviewed auth flows - API security - data validation - OWASP checks
+TECH-3-008,Demo Script & Documentation,Documentation,Phase 3,2025-12-10,3,Moshe Beeri,Created investor demo script and flow documentation

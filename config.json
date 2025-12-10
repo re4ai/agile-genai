@@ -1,8 +1,8 @@
 {
   "project": {
-    "name": "Agile GenAI",
-    "title": "Agile GenAI Sprint Dashboard",
-    "description": "CSV-based agile task management for AI-assisted development"
+    "name": "RE4AI",
+    "title": "RE4AI Sprint Dashboard",
+    "description": "CSV-based agile task management for RE4AI real estate platform"
   },
   "files": {
     "backlog": "backlog.csv",
