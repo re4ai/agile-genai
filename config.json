@@ -31,12 +31,18 @@
     }
   },
   "team": {
+    "members": [
+      "Moshe Beeri",
+      "Udi Shuchami",
+      "Oren Molakandof",
+      "Claude Code"
+    ],
     "roles": [
-      "Product Owner",
-      "Scrum Master",
-      "Developer",
-      "Designer",
+      "CTO",
+      "CEO",
+      "Chief Real Estate",
       "AI Agent",
+      "Developer",
       "Unassigned"
     ],
     "categories": [
