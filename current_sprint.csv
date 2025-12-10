@@ -1,1 +1,9 @@
 id,title,category,status,priority,owner,due_date,estimate_hours,progress_percent,dependencies,notes
+TECH-3C-001,Fix Order Canvas 404 Route,Bug,pending,critical,Moshe Beeri,2025-12-10,2,0,"",Order links go to /canvas-order/{id} which returns 404
+TECH-3C-002,Fix History & Properties Empty State,Bug,pending,high,Moshe Beeri,2025-12-10,3,0,"",Threads list shows empty - ensure user threads loaded
+TECH-3C-003,Fix Double Order Request,Bug,pending,high,Moshe Beeri,2025-12-10,2,0,"",User has to ask twice to create order
+TECH-3C-004,Buyer Post-Order Legal Flow,Integration,pending,critical,Moshe Beeri,2025-12-11,5,0,"TECH-3C-001,TECH-3C-003",After order creation trigger LawyerVerification canvas
+TECH-3C-005,Buyer Post-Order Payment Flow,Integration,pending,critical,Moshe Beeri,2025-12-11,4,0,TECH-3C-004,After legal verification trigger PaymentAndTaxForms canvas
+TECH-3C-006,Buyer Post-Order Document Signing,Integration,pending,critical,Moshe Beeri,2025-12-11,4,0,TECH-3C-005,After payment trigger DocumentSigning canvas
+TECH-3C-007,Add Continue Flow Links to Home,Frontend,pending,high,Moshe Beeri,2025-12-12,3,0,"TECH-3C-004,TECH-3C-005,TECH-3C-006",Add navigation links to continue pending orders
+TECH-3C-008,E2E Buyer Complete Flow Testing,Testing,pending,high,Moshe Beeri,2025-12-12,4,0,TECH-3C-007,Test complete buyer journey including legal/payment/signing
