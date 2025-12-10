@@ -1,9 +1,7 @@
 id,title,category,status,priority,owner,due_date,estimate_hours,progress_percent,dependencies,notes
-TECH-3C-001,Fix Order Canvas 404 Route,Bug,completed,critical,Moshe Beeri,2025-12-10,2,100,"",Created /canvas-order/[orderId] route that redirects to canvas-buyer with threadId
-TECH-3C-002,Fix History & Properties Empty State,Bug,completed,high,Moshe Beeri,2025-12-10,3,100,"",Fixed thread filtering logic and added thread_id/created_at to search results
-TECH-3C-003,Fix Double Order Request,Bug,completed,high,Moshe Beeri,2025-12-10,2,100,"",Added fast-track order detection when search results available and order keywords detected
-TECH-3C-004,Buyer Post-Order Legal Flow,Integration,completed,critical,Moshe Beeri,2025-12-11,5,100,"TECH-3C-001,TECH-3C-003",Created BuyerFlowCanvas with stage-based rendering and legal verification actions
-TECH-3C-005,Buyer Post-Order Payment Flow,Integration,completed,critical,Moshe Beeri,2025-12-11,4,100,TECH-3C-004,Added payment actions to BuyerAgent and wired PaymentAndTaxFormsCanvas in BuyerFlowCanvas
-TECH-3C-006,Buyer Post-Order Document Signing,Integration,completed,critical,Moshe Beeri,2025-12-11,4,100,TECH-3C-005,Added document signing actions with demo mode completion flow
-TECH-3C-007,Add Continue Flow Links to Home,Frontend,completed,high,Moshe Beeri,2025-12-12,3,100,"TECH-3C-004,TECH-3C-005,TECH-3C-006",Enhanced order cards with stage detection and progress indicators and continue buttons
-TECH-3C-008,E2E Buyer Complete Flow Testing,Testing,completed,high,Moshe Beeri,2025-12-12,4,100,TECH-3C-007,Updated E2E test with stage-based flow tracking - all 39 tests passing
+TECH-3B-001,Seller Legal Verification Flow,Backend,pending,critical,Moshe Beeri,2025-12-10,6,0,"",Add pending_verification status before publish - require lawyer approval for seller listings
+TECH-3B-002,Seller Document Generation,Backend,pending,high,Moshe Beeri,2025-12-10,5,0,TECH-3B-001,Generate seller-side legal documents (listing agreement - disclosure - ownership proof)
+TECH-3B-003,Seller Verification Canvas Integration,Frontend,pending,high,Moshe Beeri,2025-12-11,4,0,TECH-3B-001,Wire SellingAgent to LawyerVerificationCanvas for seller identity and ownership verification
+TECH-3B-004,Seller Document Signing Flow,Backend,pending,high,Moshe Beeri,2025-12-11,5,0,"TECH-3B-002,TECH-3B-003",Enable seller to sign listing documents via DocuSign before property goes live
+TECH-3B-005,Seller Settlement Confirmation,Integration,pending,medium,Moshe Beeri,2025-12-12,3,0,TECH-3B-004,Notify seller when buyer completes purchase - confirm fund receipt
+TECH-3B-006,E2E Seller Legal Flow Testing,Testing,pending,high,Moshe Beeri,2025-12-12,4,0,TECH-3B-005,Test complete seller legal journey - listing to verified publication
