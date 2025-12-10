@@ -22,6 +22,12 @@ TECH-3-005,Backend,Error Handling & Recovery,"Add error boundaries - retry logic
 TECH-3-006,Backend,Logging & Monitoring,"Add structured logging - Firebase monitoring - error tracking","high",Phase 3,completed,4,Moshe Beeri
 TECH-3-007,Security,Security Review,"Review auth flows - API security - data validation - OWASP checks","critical",Phase 3,completed,4,Moshe Beeri
 TECH-3-008,Documentation,Demo Script & Documentation,"Create investor demo script and flow documentation","high",Phase 3,completed,3,Moshe Beeri
+TECH-3B-001,Backend,Seller Legal Verification Flow,"Add pending_verification status before publish - require lawyer approval for seller listings","critical",Phase 3B,pending,6,Moshe Beeri
+TECH-3B-002,Backend,Seller Document Generation,"Generate seller-side legal documents (listing agreement - disclosure - ownership proof)","high",Phase 3B,pending,5,Moshe Beeri
+TECH-3B-003,Frontend,Seller Verification Canvas Integration,"Wire SellingAgent to LawyerVerificationCanvas for seller identity and ownership verification","high",Phase 3B,pending,4,Moshe Beeri
+TECH-3B-004,Backend,Seller Document Signing Flow,"Enable seller to sign listing documents via DocuSign before property goes live","high",Phase 3B,pending,5,Moshe Beeri
+TECH-3B-005,Integration,Seller Settlement Confirmation,"Notify seller when buyer completes purchase - confirm fund receipt","medium",Phase 3B,pending,3,Moshe Beeri
+TECH-3B-006,Testing,E2E Seller Legal Flow Testing,"Test complete seller legal journey - listing to verified publication","high",Phase 3B,pending,4,Moshe Beeri
 TECH-4-001,Feature,Video Conferencing for Lawyer Verification,"Integrate Daily.co or Twilio for real video calls","medium",Phase 4,pending,8,Moshe Beeri
 TECH-4-002,Feature,Secondary Market Implementation,"Build order book and fraction trading functionality","medium",Phase 4,pending,10,Moshe Beeri
 TECH-4-003,Feature,Advanced Analytics,"Implement portfolio analytics and performance tracking","medium",Phase 4,pending,8,Moshe Beeri
