@@ -1,7 +1,7 @@
 id,title,category,status,priority,owner,due_date,estimate_hours,progress_percent,dependencies,notes
-TECH-3B-001,Seller Legal Verification Flow,Backend,pending,critical,Moshe Beeri,2025-12-10,6,0,"",Add pending_verification status before publish - require lawyer approval for seller listings
-TECH-3B-002,Seller Document Generation,Backend,pending,high,Moshe Beeri,2025-12-10,5,0,TECH-3B-001,Generate seller-side legal documents (listing agreement - disclosure - ownership proof)
-TECH-3B-003,Seller Verification Canvas Integration,Frontend,pending,high,Moshe Beeri,2025-12-11,4,0,TECH-3B-001,Wire SellingAgent to LawyerVerificationCanvas for seller identity and ownership verification
-TECH-3B-004,Seller Document Signing Flow,Backend,pending,high,Moshe Beeri,2025-12-11,5,0,"TECH-3B-002,TECH-3B-003",Enable seller to sign listing documents via DocuSign before property goes live
-TECH-3B-005,Seller Settlement Confirmation,Integration,pending,medium,Moshe Beeri,2025-12-12,3,0,TECH-3B-004,Notify seller when buyer completes purchase - confirm fund receipt
-TECH-3B-006,E2E Seller Legal Flow Testing,Testing,pending,high,Moshe Beeri,2025-12-12,4,0,TECH-3B-005,Test complete seller legal journey - listing to verified publication
+TECH-3B-001,Seller Legal Verification Flow,Backend,completed,critical,Moshe Beeri,2025-12-10,6,100,"",Created SellerFlowCanvas and modified publishPropertyListing to require verification
+TECH-3B-002,Seller Document Generation,Backend,completed,high,Moshe Beeri,2025-12-10,5,100,TECH-3B-001,Added seller document generation in start_seller_document_signing action handler
+TECH-3B-003,Seller Verification Canvas Integration,Frontend,completed,high,Moshe Beeri,2025-12-11,4,100,TECH-3B-001,SellerFlowCanvas integrates LawyerVerificationCanvas with userRole=seller
+TECH-3B-004,Seller Document Signing Flow,Backend,completed,high,Moshe Beeri,2025-12-11,5,100,"TECH-3B-002,TECH-3B-003",Added sign_seller_documents action with demo mode signing completion
+TECH-3B-005,Seller Settlement Confirmation,Integration,completed,medium,Moshe Beeri,2025-12-12,3,100,TECH-3B-004,Added notifySellerOfPurchase method with notifications and order updates
+TECH-3B-006,E2E Seller Legal Flow Testing,Testing,completed,high,Moshe Beeri,2025-12-12,4,100,TECH-3B-005,Updated E2E test with stage-based flow tracking - all 21 tests passing
