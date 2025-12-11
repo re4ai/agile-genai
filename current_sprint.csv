@@ -1,7 +1,4 @@
 id,title,category,status,priority,owner,due_date,estimate_hours,progress_percent,dependencies,notes
-TECH-3B-001,Seller Legal Verification Flow,Backend,completed,critical,Moshe Beeri,2025-12-10,6,100,"",Created SellerFlowCanvas and modified publishPropertyListing to require verification
-TECH-3B-002,Seller Document Generation,Backend,completed,high,Moshe Beeri,2025-12-10,5,100,TECH-3B-001,Added seller document generation in start_seller_document_signing action handler
-TECH-3B-003,Seller Verification Canvas Integration,Frontend,completed,high,Moshe Beeri,2025-12-11,4,100,TECH-3B-001,SellerFlowCanvas integrates LawyerVerificationCanvas with userRole=seller
-TECH-3B-004,Seller Document Signing Flow,Backend,completed,high,Moshe Beeri,2025-12-11,5,100,"TECH-3B-002,TECH-3B-003",Added sign_seller_documents action with demo mode signing completion
-TECH-3B-005,Seller Settlement Confirmation,Integration,completed,medium,Moshe Beeri,2025-12-12,3,100,TECH-3B-004,Added notifySellerOfPurchase method with notifications and order updates
-TECH-3B-006,E2E Seller Legal Flow Testing,Testing,completed,high,Moshe Beeri,2025-12-12,4,100,TECH-3B-005,Updated E2E test with stage-based flow tracking - all 21 tests passing
+TECH-3H-001,Add Canvas-Agent State Sync section to AGENT_CANVAS_GUIDE.md,Documentation,completed,critical,Moshe Beeri,2025-12-11,2,100,"",Complete reactive state pattern documentation with mermaid diagrams
+TECH-3H-002,Verify all flow canvas components have onSnapshot,Testing,completed,high,Moshe Beeri,2025-12-11,1,100,TECH-3H-001,All 10 canvas components verified with onSnapshot listeners
+TECH-3H-003,Update guide with state shape examples per canvas,Documentation,completed,medium,Moshe Beeri,2025-12-11,1,100,TECH-3H-001,Added state shape examples for 4 canvas types

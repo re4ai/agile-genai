@@ -31,3 +31,41 @@ TECH-3-005,Error Handling & Recovery,Backend,Phase 3,2025-12-10,5,Moshe Beeri,Ad
 TECH-3-006,Logging & Monitoring,Backend,Phase 3,2025-12-10,4,Moshe Beeri,Added structured logging - Firebase monitoring - error tracking
 TECH-3-007,Security Review,Security,Phase 3,2025-12-10,4,Moshe Beeri,Reviewed auth flows - API security - data validation - OWASP checks
 TECH-3-008,Demo Script & Documentation,Documentation,Phase 3,2025-12-10,3,Moshe Beeri,Created investor demo script and flow documentation
+TECH-3D-001,Fix SellingAgent Publish Confirmation,Bug,Phase 3D,2025-12-10,2,Moshe Beeri,Added simple affirmative responses to isPublishRequest (yes/yeah/ok/do it/etc)
+TECH-3D-002,Add Verification Link in Home Page,Bug,Phase 3D,2025-12-10,3,Moshe Beeri,Added Start Verification button for pending_verification status in user-properties-section
+TECH-3D-003,Fix Misleading Published Message,Bug,Phase 3D,2025-12-10,2,Moshe Beeri,Changed draft creation message from available for investment to saved as draft
+TECH-3D-004,Listing Verification Status System,Feature,Phase 3D,2025-12-11,6,Moshe Beeri,Three verification statuses. Listings publish immediately. 1000EUR deposit for unverified sellers.
+TECH-3D-005,Fix SellerFlowCanvas Stage Detection,Bug,Phase 3D,2025-12-11,2,Moshe Beeri,Updated stage detection logic and added PublishedListingCanvas with verification buttons
+TECH-3D-006,Add Initial Verify Demo Button,Feature,Phase 3D,2025-12-11,1,Moshe Beeri,Added set_initial_verification action and Initial Verify Demo button
+TECH-3D-007,Wire Buyer Deposit Payment to Stripe,Integration,Phase 3D,2025-12-11,2,Moshe Beeri,Connected pay_deposit action to StripePaymentService with demo mode fallback
+TECH-3E-001,Debug chatStarted for flow routes,Bug,Phase 3E,2025-12-10,2,Moshe Beeri,Found root cause: chatStarted only set when messages exist. Added fix in GraphContext to set chatStarted=true when thread has canvasType.
+TECH-3E-002,Fix Canvas initialization for existing threads,Bug,Phase 3E,2025-12-10,1,Moshe Beeri,Merged with TECH-3E-001 fix. GraphContext now sets chatStarted=true when thread has canvasType set.
+TECH-3E-003,Verify agent routing per canvas type,Integration,Phase 3E,2025-12-10,2,Moshe Beeri,Fixed: Added lawyer-verification to LawyerVerificationAgent supportedCanvasTypes. Modified AgentRegistry to prioritize canvasType over intent classification.
+TECH-3E-004,Test seller verification flow end-to-end,Testing,Phase 3E,2025-12-10,1,Moshe Beeri,Both functions and frontend build successfully. Ready for manual E2E testing.
+TECH-3F-001,Create AGENT_CANVAS_GUIDE.md,Documentation,Phase 3F,2025-12-11,3,Moshe Beeri,Comprehensive guide for agent-canvas protocol - covers intent routing and flow initialization
+TECH-3F-002,Add initializeFlow to BaseAgent,Backend,Phase 3F,2025-12-11,1,Moshe Beeri,Added FlowContext interface and optional initializeFlow method for proactive agent greetings
+TECH-3F-003,Add initializeFlowStep cloud function,Backend,Phase 3F,2025-12-11,2,Moshe Beeri,Cloud function creates flow thread - finds agent by canvasType - triggers greeting
+TECH-3F-004,Implement initializeFlow in LawyerVerificationAgent,Backend,Phase 3F,2025-12-11,1,Moshe Beeri,Context-aware greeting for lawyer verification flow
+TECH-3F-005,Implement initializeFlow in LegalAgent,Backend,Phase 3F,2025-12-11,1,Moshe Beeri,Context-aware greeting for document signing flow
+TECH-3F-006,Implement initializeFlow in PaymentAgent,Backend,Phase 3F,2025-12-11,1,Moshe Beeri,Context-aware greeting for payment flow with test mode detection
+TECH-3F-007,Create useFlowThread hook,Frontend,Phase 3F,2025-12-11,2,Moshe Beeri,React hook to initialize flow threads with agent greetings
+TECH-3F-008,Update lawyer-verification route pages,Frontend,Phase 3F,2025-12-11,1,Moshe Beeri,Both seller and buyer flow pages now use useFlowThread pattern
+TECH-3F-009,Update document-signing route pages,Frontend,Phase 3F,2025-12-11,1,Moshe Beeri,Both seller and buyer flow pages now use useFlowThread pattern
+TECH-3F-010,Update payment route pages,Frontend,Phase 3F,2025-12-11,1,Moshe Beeri,Both seller and buyer flow pages now use useFlowThread pattern
+TECH-3F-011,Update all buyer-flow routes,Frontend,Phase 3F,2025-12-11,1,Moshe Beeri,All buyer flow pages updated with useFlowThread pattern
+TECH-3F-012,Verify builds,Testing,Phase 3F,2025-12-11,1,Moshe Beeri,Functions and frontend builds verified successful
+TECH-3G-001,Update AGENT_CANVAS_GUIDE.md with prompt architecture,Documentation,Phase 3G,2025-12-11,2,Moshe Beeri,Added 7-layer hierarchy and flow agent patterns
+TECH-3G-002,Create lawyer-verification-agent.ts prompt,Backend,Phase 3G,2025-12-11,2,Moshe Beeri,Stage-aware verification prompts with decision trees
+TECH-3G-003,Create legal-signing-agent.ts prompt,Backend,Phase 3G,2025-12-11,2,Moshe Beeri,Document signing stage prompts with sequential rules
+TECH-3G-004,Create payment-agent.ts prompt,Backend,Phase 3G,2025-12-11,2,Moshe Beeri,Payment flow stage prompts with test mode support
+TECH-3G-005,Create lawyer-verification-canvas.ts,Backend,Phase 3G,2025-12-11,1,Moshe Beeri,Canvas context for verification with stage progression
+TECH-3G-006,Create document-signing-canvas.ts,Backend,Phase 3G,2025-12-11,1,Moshe Beeri,Canvas context for signing with sequential docs
+TECH-3G-007,Create payment-canvas.ts,Backend,Phase 3G,2025-12-11,1,Moshe Beeri,Canvas context for payment with fee breakdown
+TECH-3G-008,Update LawyerVerificationAgent,Backend,Phase 3G,2025-12-11,2,Moshe Beeri,Use hierarchical prompts in initializeFlow and process
+TECH-3G-009,Update LegalAgent,Backend,Phase 3G,2025-12-11,2,Moshe Beeri,Use hierarchical prompts for signing flow
+TECH-3G-010,Update PaymentAgent,Backend,Phase 3G,2025-12-11,2,Moshe Beeri,Use hierarchical prompts for payment flow
+TECH-3G-011,Update PromptBuilder,Backend,Phase 3G,2025-12-11,2,Moshe Beeri,Add flow agent/canvas type support
+TECH-3G-012,Verify builds and test,Testing,Phase 3G,2025-12-11,1,Moshe Beeri,Functions and frontend builds verified successful
+TECH-3H-001,Add Canvas-Agent State Sync section to AGENT_CANVAS_GUIDE.md,Documentation,Phase 3H,2025-12-11,2,Moshe Beeri,Complete reactive state pattern documentation with mermaid diagrams and code examples
+TECH-3H-002,Verify all flow canvas components have onSnapshot,Testing,Phase 3H,2025-12-11,1,Moshe Beeri,All 10 canvas components verified with onSnapshot listeners
+TECH-3H-003,Update guide with state shape examples per canvas,Documentation,Phase 3H,2025-12-11,1,Moshe Beeri,Added state shape examples for PropertyFinder - LawyerVerification - DocumentSigning - Payment canvases
