@@ -46,17 +46,34 @@
       "phase": "Phase 3D",
       "startDate": "2025-12-10",
       "endDate": "2025-12-11",
-      "status": "active"
+      "status": "completed"
+    },
+    {
+      "id": "phase3j",
+      "name": "Phase 3J - Flow Orchestration System",
+      "phase": "Phase 3J",
+      "startDate": "2025-12-13",
+      "endDate": "2025-12-14",
+      "status": "completed"
+    },
+    {
+      "id": "cattes-improvement",
+      "name": "CATTES Pattern Improvement",
+      "phase": "CATTES",
+      "startDate": "2025-12-14",
+      "endDate": "2025-12-20",
+      "status": "active",
+      "description": "Consistency & future-proofing for Canvas-Agent pattern"
     },
     {
       "id": "phase4",
       "name": "Phase 4 - Advanced Features",
       "phase": "Phase 4",
-      "startDate": "2025-12-18",
+      "startDate": "2025-12-21",
       "endDate": "2025-12-31",
       "status": "planning"
     }
   ],
-  "activeSprint": "phase3d",
-  "lastUpdated": "2025-12-10T14:00:00Z"
+  "activeSprint": "cattes-improvement",
+  "lastUpdated": "2025-12-14T22:00:00Z"
 }

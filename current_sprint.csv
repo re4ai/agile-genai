@@ -1,4 +1,3 @@
 id,title,category,status,priority,owner,due_date,estimate_hours,progress_percent,dependencies,notes
-TECH-3H-001,Add Canvas-Agent State Sync section to AGENT_CANVAS_GUIDE.md,Documentation,completed,critical,Moshe Beeri,2025-12-11,2,100,"",Complete reactive state pattern documentation with mermaid diagrams
-TECH-3H-002,Verify all flow canvas components have onSnapshot,Testing,completed,high,Moshe Beeri,2025-12-11,1,100,TECH-3H-001,All 10 canvas components verified with onSnapshot listeners
-TECH-3H-003,Update guide with state shape examples per canvas,Documentation,completed,medium,Moshe Beeri,2025-12-11,1,100,TECH-3H-001,Added state shape examples for 4 canvas types
+TECH-6-001,Production Deployment,Deployment,in_progress,critical,Claude,2025-12-25,8,75,TECH-5-002,"Deploy to production Firebase - awaiting user testing and approval"
+TECH-6-002,Complete Documentation,Documentation,completed,medium,Claude,2025-12-15,8,100,TECH-6-001,"API docs, agent workflow docs, operational runbook created"

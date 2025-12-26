@@ -69,3 +69,58 @@ TECH-3G-012,Verify builds and test,Testing,Phase 3G,2025-12-11,1,Moshe Beeri,Fun
 TECH-3H-001,Add Canvas-Agent State Sync section to AGENT_CANVAS_GUIDE.md,Documentation,Phase 3H,2025-12-11,2,Moshe Beeri,Complete reactive state pattern documentation with mermaid diagrams and code examples
 TECH-3H-002,Verify all flow canvas components have onSnapshot,Testing,Phase 3H,2025-12-11,1,Moshe Beeri,All 10 canvas components verified with onSnapshot listeners
 TECH-3H-003,Update guide with state shape examples per canvas,Documentation,Phase 3H,2025-12-11,1,Moshe Beeri,Added state shape examples for PropertyFinder - LawyerVerification - DocumentSigning - Payment canvases
+FLOW-001,Create compliance-flow.ts TypeScript interfaces,Backend,Phase 3J,2025-12-14,1,Claude,Interfaces for ComplianceFlow ComplianceTask FlowProgress TaskProgress
+FLOW-002,Create seed-compliance-flows.js script,Backend,Phase 3J,2025-12-14,1,Claude,Seed script creates seller-compliance (4 tasks) and buyer-compliance (3 tasks) flows
+FLOW-003,Add npm run seed:flows command to package.json,Backend,Phase 3J,2025-12-14,0.5,Claude,Added seed:flows and seed:flows:prod scripts
+FLOW-004,Create FlowOrchestrator.ts service,Backend,Phase 3J,2025-12-14,2,Claude,Core orchestration with getFlowByOperation getOrCreateProgress completeTask getAvailableTasks startTask
+FLOW-005,Add getFlowProgress cloud function,Backend,Phase 3J,2025-12-14,1,Claude,Added getFlowProgress getOrCreateFlowProgress startFlowTask
+FLOW-006,Add completeFlowTask cloud function,Backend,Phase 3J,2025-12-14,1,Claude,Cloud function for agents to mark tasks complete
+FLOW-007,Update initializeFlowStep to link threads to flow progress,Backend,Phase 3J,2025-12-14,1,Claude,Added progressId taskId params and auto-starts task in flow progress
+FLOW-008,Update LawyerVerificationAgent to call completeFlowTask,Backend,Phase 3J,2025-12-14,1,Claude,Agent calls flowOrchestrator.completeTask on verification approval
+FLOW-009,Create useFlowProgress.ts hook,Frontend,Phase 3J,2025-12-14,1,Claude,React hook with real-time Firestore listener and createProgress function
+FLOW-010,Create FlowProgressCard.tsx component,Frontend,Phase 3J,2025-12-14,2,Claude,UI component with progress bar task list and start/continue buttons
+FLOW-011,Update user-properties-section.tsx to show flow progress,Frontend,Phase 3J,2025-12-14,1,Claude,Integrated FlowProgressCard replacing hardcoded verification banner
+CATTES-DOC-001,Create CATTES HLD document,Documentation,CATTES,2025-12-14,2,Claude,Comprehensive HLD with architecture diagrams and developer guide
+CATTES-DOC-002,Create CATTES improvement plan,Documentation,CATTES,2025-12-14,2,Claude,Detailed work plan with 4 phases for pattern consistency
+CATTES-0-001,Create deepMerge utility function,Backend,CATTES-Phase0,2025-12-15,1,Claude,Created functions/src/utils/deepMerge.ts for nested state preservation
+CATTES-0-002,Update index.ts to use deep merge,Backend,CATTES-Phase0,2025-12-15,1,Claude,processMessage now uses deepMerge for canvas state
+CATTES-0-003,Verify Firebase Storage URL regex,Backend,CATTES-Phase0,2025-12-15,0.5,Claude,Confirmed regex supports query params in all SellingAgent locations
+CATTES-1-001,Create FileUploadNormalizer service,Backend,CATTES-Phase1,2025-12-15,2,Claude,Single source of truth for file handling - normalizes all file formats
+CATTES-1-002,Create CanvasStateManager service,Backend,CATTES-Phase1,2025-12-15,2,Claude,Centralized deep merge + validation + persistence
+CATTES-1-003,Create canvas-states.ts type definitions,Backend,CATTES-Phase1,2025-12-15,1,Claude,TypeScript interfaces for each canvas type
+CATTES-1-004,Add unit tests for FileUploadNormalizer,Testing,CATTES-Phase1,2025-12-15,1,Claude,Comprehensive test coverage for file normalization
+CATTES-1-005,Add unit tests for CanvasStateManager,Testing,CATTES-Phase1,2025-12-15,1,Claude,Tests for deep merge - undefined cleaning - schema validation
+CATTES-2-001,Add helper methods to BaseAgent,Backend,CATTES-Phase2,2025-12-15,1,Claude,getNormalizedFiles getFilesOfType hasFilesOfType mergeCanvasState
+CATTES-2-002,Update SellingAgent to use new services,Backend,CATTES-Phase2,2025-12-15,2,Claude,Replaced manual file detection with getNormalizedFiles
+CATTES-2-003,Update LawyerVerificationAgent to use services,Backend,CATTES-Phase2,2025-12-15,2,Claude,Replaced fallback chains - uses typed canvas state
+CATTES-2-004,Update PaymentAgent to use new services,Backend,CATTES-Phase2,2025-12-15,1,Claude,Uses typed PaymentCanvasState and mergeCanvasState
+CATTES-2-005,Update LegalAgent to use new services,Backend,CATTES-Phase2,2025-12-15,1,Claude,Uses typed DocumentSigningCanvasState
+CATTES-2-006,Resolve canvas type conflict,Backend,CATTES-Phase2,2025-12-15,0.5,Claude,Removed legal-documents from LawyerVerificationAgent
+CATTES-3-001,Create FlowAgentBase abstract class,Backend,CATTES-Phase3,2025-12-15,2,Claude,Common flow patterns extracted - stages - handleAction - initializeFlow
+CATTES-3-002,Migrate LawyerVerificationAgent to FlowAgentBase,Backend,CATTES-Phase3,2025-12-15,2,Claude,Reduced LoC from ~400 to ~200 with stages array
+CATTES-3-003,Migrate PaymentAgent to FlowAgentBase,Backend,CATTES-Phase3,2025-12-15,1.5,Claude,Uses stages array and handleAction pattern
+CATTES-3-004,Migrate LegalAgent to FlowAgentBase,Backend,CATTES-Phase3,2025-12-15,1.5,Claude,Uses stages array and handleAction pattern
+CATTES-4-001,Write CATTES integration tests,Testing,CATTES-Phase4,2025-12-15,2,Claude,Integration tests for FileUploadNormalizer CanvasStateManager FlowAgentBase
+CATTES-4-002,E2E testing of all agent flows,Testing,CATTES-Phase4,2025-12-15,2,Claude,Verified no regression in all agent flows
+CATTES-4-003,Update CATTES HLD with implementation details,Documentation,CATTES-Phase4,2025-12-15,1,Claude,Documented actual implementations and deviations
+CATTES-4-004,Performance benchmark before/after,Testing,CATTES-Phase4,2025-12-15,1,Claude,60/60 tests pass in 1ms - no regression
+TECH-3C-001,Fix Order Canvas 404 Route,Bug,Phase 3C,2025-12-15,2,Claude,Fixed: Updated to useParams() pattern
+TECH-3C-002,Fix History & Properties Empty State,Bug,Phase 3C,2025-12-15,3,Claude,Fixed: Added Firestore indexes - emulator auto-supports all queries
+TECH-3C-003,Fix Double Order Request,Bug,Phase 3C,2025-12-15,2,Claude,Fixed: Added keyword fallback for order intent detection
+TECH-3C-004,Buyer Post-Order Legal Flow,Integration,Phase 3C,2025-12-15,5,Claude,Verified: BuyerFlowCanvas + lawyer-verification + useFlowThread integration
+TECH-3C-005,Buyer Post-Order Payment Flow,Integration,Phase 3C,2025-12-15,4,Claude,Verified: BuyerFlowCanvas + payment + useFlowThread integration
+TECH-3C-006,Buyer Post-Order Document Signing,Integration,Phase 3C,2025-12-15,4,Claude,Verified: BuyerFlowCanvas + document-signing + useFlowThread integration
+TECH-3C-007,Add Continue Flow Links to Home,Frontend,Phase 3C,2025-12-15,3,Claude,Complete: Auto-switches to orders tab - PendingOrderCard has continue flow links
+TECH-3C-008,E2E Buyer Complete Flow Testing,Testing,Phase 3C,2025-12-15,4,Claude,Complete: test_buyer_complete_flow.py with 10 tests
+TECH-3B-001,Seller Legal Verification Flow,Backend,Phase 3B,2025-12-15,6,Claude,Integrated FlowOrchestrator with SellingAgent - startSellerVerificationFlow creates progress and navigates to verification canvas
+TECH-3B-002,Seller Document Generation,Backend,Phase 3B,2025-12-15,5,Claude,LegalTemplateService generates seller documents (listing agreement - disclosure - ownership proof)
+TECH-3B-003,Seller Verification Canvas Integration,Frontend,Phase 3B,2025-12-15,4,Claude,Updated seller-flow pages to pass progressId and taskId to useFlowThread hook
+TECH-3B-004,Seller Document Signing Flow,Backend,Phase 3B,2025-12-15,5,Claude,sign_seller_documents action completes document-signing task via FlowOrchestrator
+TECH-3B-005,Seller Settlement Confirmation,Integration,Phase 3B,2025-12-15,3,Claude,notifySellerOfSale in PaymentAgent creates notification and updates listing fractional counts
+TECH-3B-006,E2E Seller Legal Flow Testing,Testing,Phase 3B,2025-12-15,4,Claude,TypeScript tests - 34 tests passing in FlowOrchestrator.test.ts and SellerLegalFlow.test.ts
+TECH-4-002,Secondary Market Implementation,Feature,Phase 4,2025-12-15,10,Claude,TradingAgent with CATTES pattern - ownership validation in OrderService - settlement triggering in OrderBookService - 23 tests
+TECH-4-003,Advanced Analytics,Feature,Phase 4,2025-12-15,8,Claude,PortfolioAgent with CATTES pattern - PortfolioAnalyticsService - ROI calculations - performance tracking - market trends - 25 tests
+TECH-4-001,Video Conferencing for Lawyer Verification,Feature,Phase 4,2025-12-15,4,Claude,VideoConferenceAgent with CATTES pattern - VideoConferenceService mock mode - 6 flow stages - 28 tests - scheduling/waiting_room/in_call/verification_pending/verified/failed stages
+TECH-5-001,Comprehensive Test Suite,Testing,Phase 5,2025-12-15,16,Claude,396 tests across 18 test suites - BuyerAgent AgentRegistry IntentClassificationService StripePaymentService - full coverage of agents services tools utils
+TECH-5-002,Security Audit,Security,Phase 5,2025-12-15,12,Claude,OWASP Top 10 audit complete - Auth/API/Validation - security.ts analysis - report: docs/security-audit-report.md
+TECH-6-002,Complete Documentation,Documentation,Phase 6,2025-12-15,8,Claude,API documentation - agent workflow documentation - operational runbook - docs README index created

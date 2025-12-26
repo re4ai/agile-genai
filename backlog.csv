@@ -22,20 +22,20 @@ TECH-3-005,Backend,Error Handling & Recovery,"Add error boundaries - retry logic
 TECH-3-006,Backend,Logging & Monitoring,"Add structured logging - Firebase monitoring - error tracking","high",Phase 3,completed,4,Moshe Beeri
 TECH-3-007,Security,Security Review,"Review auth flows - API security - data validation - OWASP checks","critical",Phase 3,completed,4,Moshe Beeri
 TECH-3-008,Documentation,Demo Script & Documentation,"Create investor demo script and flow documentation","high",Phase 3,completed,3,Moshe Beeri
-TECH-3C-001,Bug,Fix Order Canvas 404 Route,"Order links go to /canvas-order/{id} which returns 404 - fix routing to correct canvas path","critical",Phase 3C,pending,2,Moshe Beeri
-TECH-3C-002,Bug,Fix History & Properties Empty State,"Threads list shows empty - ensure user threads and properties are loaded and displayed","high",Phase 3C,pending,3,Moshe Beeri
-TECH-3C-003,Bug,Fix Double Order Request,"User has to ask twice to create order - investigate and fix BuyingAgent order flow","high",Phase 3C,pending,2,Moshe Beeri
-TECH-3C-004,Integration,Buyer Post-Order Legal Flow,"After order creation trigger LawyerVerification canvas - wire BuyingAgent to legal flow","critical",Phase 3C,pending,5,Moshe Beeri
-TECH-3C-005,Integration,Buyer Post-Order Payment Flow,"After legal verification trigger PaymentAndTaxForms canvas - wire to Stripe checkout","critical",Phase 3C,pending,4,Moshe Beeri
-TECH-3C-006,Integration,Buyer Post-Order Document Signing,"After payment trigger DocumentSigning canvas - wire to DocuSign flow","critical",Phase 3C,pending,4,Moshe Beeri
-TECH-3C-007,Frontend,Add Continue Flow Links to Home,"Add clear navigation links on home page to continue pending orders through legal/payment/signing","high",Phase 3C,pending,3,Moshe Beeri
-TECH-3C-008,Testing,E2E Buyer Complete Flow Testing,"Test complete buyer journey including legal verification - payment - document signing","high",Phase 3C,pending,4,Moshe Beeri
-TECH-3B-001,Backend,Seller Legal Verification Flow,"Add pending_verification status before publish - require lawyer approval for seller listings","critical",Phase 3B,pending,6,Moshe Beeri
-TECH-3B-002,Backend,Seller Document Generation,"Generate seller-side legal documents (listing agreement - disclosure - ownership proof)","high",Phase 3B,pending,5,Moshe Beeri
-TECH-3B-003,Frontend,Seller Verification Canvas Integration,"Wire SellingAgent to LawyerVerificationCanvas for seller identity and ownership verification","high",Phase 3B,pending,4,Moshe Beeri
-TECH-3B-004,Backend,Seller Document Signing Flow,"Enable seller to sign listing documents via DocuSign before property goes live","high",Phase 3B,pending,5,Moshe Beeri
-TECH-3B-005,Integration,Seller Settlement Confirmation,"Notify seller when buyer completes purchase - confirm fund receipt","medium",Phase 3B,pending,3,Moshe Beeri
-TECH-3B-006,Testing,E2E Seller Legal Flow Testing,"Test complete seller legal journey - listing to verified publication","high",Phase 3B,pending,4,Moshe Beeri
+TECH-3C-001,Bug,Fix Order Canvas 404 Route,"Order links go to /canvas-order/{id} which returns 404 - fix routing to correct canvas path","critical",Phase 3C,completed,2,Claude
+TECH-3C-002,Bug,Fix History & Properties Empty State,"Threads list shows empty - ensure user threads and properties are loaded and displayed","high",Phase 3C,completed,3,Claude
+TECH-3C-003,Bug,Fix Double Order Request,"User has to ask twice to create order - investigate and fix BuyingAgent order flow","high",Phase 3C,completed,2,Claude
+TECH-3C-004,Integration,Buyer Post-Order Legal Flow,"After order creation trigger LawyerVerification canvas - wire BuyingAgent to legal flow","critical",Phase 3C,completed,5,Claude
+TECH-3C-005,Integration,Buyer Post-Order Payment Flow,"After legal verification trigger PaymentAndTaxForms canvas - wire to Stripe checkout","critical",Phase 3C,completed,4,Claude
+TECH-3C-006,Integration,Buyer Post-Order Document Signing,"After payment trigger DocumentSigning canvas - wire to DocuSign flow","critical",Phase 3C,completed,4,Claude
+TECH-3C-007,Frontend,Add Continue Flow Links to Home,"Add clear navigation links on home page to continue pending orders through legal/payment/signing","high",Phase 3C,completed,3,Claude
+TECH-3C-008,Testing,E2E Buyer Complete Flow Testing,"Test complete buyer journey including legal verification - payment - document signing","high",Phase 3C,completed,4,Claude
+TECH-3B-001,Backend,Seller Legal Verification Flow,"Integrated FlowOrchestrator with SellingAgent - startSellerVerificationFlow creates progress","critical",Phase 3B,completed,6,Claude
+TECH-3B-002,Backend,Seller Document Generation,"LegalTemplateService generates seller documents (listing agreement - disclosure - ownership proof)","high",Phase 3B,completed,5,Claude
+TECH-3B-003,Frontend,Seller Verification Canvas Integration,"Updated seller-flow pages to pass progressId and taskId to useFlowThread hook","high",Phase 3B,completed,4,Claude
+TECH-3B-004,Backend,Seller Document Signing Flow,"sign_seller_documents action completes document-signing task via FlowOrchestrator","high",Phase 3B,completed,5,Claude
+TECH-3B-005,Integration,Seller Settlement Confirmation,"notifySellerOfSale in PaymentAgent creates notification and updates listing fractional counts","medium",Phase 3B,completed,3,Claude
+TECH-3B-006,Testing,E2E Seller Legal Flow Testing,"TypeScript tests - 34 tests passing in FlowOrchestrator.test.ts and SellerLegalFlow.test.ts","high",Phase 3B,completed,4,Claude
 TECH-3D-001,Bug,SellingAgent Publish Confirmation Not Recognized,"Agent loops asking 'Would you like to make it available' when user says 'yes please' - only recognizes explicit 'please publish'. Fix isPublishRequest to detect affirmative responses like 'yes' 'yes please' 'do it' etc.","high",Phase 3D,completed,2,Moshe Beeri
 TECH-3D-002,Bug,Missing Start Verification Link for Sellers,"After listing submission shows 'Click Start Verification' message but no button visible. Add verification link in home page Your Properties section with 'Next: Start Ownership Verification' that links to seller-flow canvas","high",Phase 3D,completed,3,Moshe Beeri
 TECH-3D-003,Bug,Fix Misleading Published Message for Sellers,"Seller gets 'listing is published' message but status is actually pending_verification. Fix agent response to accurately reflect listing status and next steps","high",Phase 3D,completed,2,Moshe Beeri
@@ -43,9 +43,31 @@ TECH-3D-004,Feature,Listing Verification Status System,"1) All listings publishe
 TECH-3D-005,Bug,Fix SellerFlowCanvas Stage Detection,"SellerFlowCanvas did not correctly detect not_verified status. Updated stage detection logic and added PublishedListingCanvas with verification buttons","high",Phase 3D,completed,2,Moshe Beeri
 TECH-3D-006,Feature,Add Initial Verify Demo Button,"Added set_initial_verification action in SellingAgent and Initial Verify (Demo) button in PublishedListingCanvas for admin/demo purposes","medium",Phase 3D,completed,1,Moshe Beeri
 TECH-3D-007,Integration,Wire Buyer Deposit Payment to Stripe,"Connected pay_deposit action to StripePaymentService.createPaymentIntent with fallback to demo mode if Stripe unavailable","high",Phase 3D,completed,2,Moshe Beeri
-TECH-4-001,Feature,Video Conferencing for Lawyer Verification,"Integrate Daily.co or Twilio for real video calls","medium",Phase 4,pending,8,Moshe Beeri
-TECH-4-002,Feature,Secondary Market Implementation,"Build order book and fraction trading functionality","medium",Phase 4,pending,10,Moshe Beeri
-TECH-4-003,Feature,Advanced Analytics,"Implement portfolio analytics and performance tracking","medium",Phase 4,pending,8,Moshe Beeri
+CATTES-0-001,Backend,Create deepMerge utility function,"Create functions/src/utils/deepMerge.ts for nested object merging without losing nested state","critical",CATTES-Phase0,completed,1,Claude
+CATTES-0-002,Backend,Update index.ts to use deep merge for canvas state,"Replace shallow spread with deepMerge in processMessage to preserve nested canvas state","critical",CATTES-Phase0,completed,1,Claude
+CATTES-0-003,Backend,Verify Firebase Storage URL regex fix,"Confirm regex pattern supports query params in all 3 SellingAgent locations","high",CATTES-Phase0,completed,0.5,Claude
+CATTES-1-001,Backend,Create FileUploadNormalizer service,"Single source of truth for file handling - normalize metadata.files/images/attachments into consistent NormalizedFile array","critical",CATTES-Phase1,completed,2,Claude
+CATTES-1-002,Backend,Create CanvasStateManager service,"Centralized deep merge + validation + persistence for canvas state with schema support","critical",CATTES-Phase1,completed,2,Claude
+CATTES-1-003,Backend,Create canvas-states.ts type definitions,"TypeScript interfaces for each canvas type: LawyerVerificationCanvasState PaymentCanvasState SellingCanvasState etc","high",CATTES-Phase1,completed,1,Claude
+CATTES-1-004,Testing,Add unit tests for FileUploadNormalizer,"Test all file format normalizations - Firebase URLs - metadata variations - edge cases","high",CATTES-Phase1,completed,1,Claude
+CATTES-1-005,Testing,Add unit tests for CanvasStateManager,"Test deep merge logic - undefined cleaning - schema validation","high",CATTES-Phase1,completed,1,Claude
+CATTES-2-001,Backend,Add helper methods to BaseAgent,"Add getNormalizedFiles getFilesOfType hasFilesOfType mergeCanvasState using new services","critical",CATTES-Phase2,completed,1,Claude
+CATTES-2-002,Backend,Update SellingAgent to use new services,"Replace manual file detection and URL extraction with getNormalizedFiles pattern","high",CATTES-Phase2,completed,2,Claude
+CATTES-2-003,Backend,Update LawyerVerificationAgent to use new services,"Replace fallback chains with getNormalizedFiles - use typed LawyerVerificationCanvasState","high",CATTES-Phase2,completed,2,Claude
+CATTES-2-004,Backend,Update PaymentAgent to use new services,"Use typed PaymentCanvasState interface and mergeCanvasState","high",CATTES-Phase2,completed,1,Claude
+CATTES-2-005,Backend,Update LegalAgent to use new services,"Use typed DocumentSigningCanvasState interface and mergeCanvasState","high",CATTES-Phase2,completed,1,Claude
+CATTES-2-006,Backend,Resolve canvas type conflict (legal-documents),"Remove legal-documents from LawyerVerificationAgent.supportedCanvasTypes - LegalAgent owns it","medium",CATTES-Phase2,completed,0.5,Claude
+CATTES-3-001,Backend,Create FlowAgentBase abstract class,"Extract common flow patterns: stages array - handleAction routing - initializeFlow template - suggested actions","critical",CATTES-Phase3,completed,2,Claude
+CATTES-3-002,Backend,Migrate LawyerVerificationAgent to FlowAgentBase,"Use stages array and handleAction pattern - reduce LoC from ~400 to ~200","high",CATTES-Phase3,completed,2,Claude
+CATTES-3-003,Backend,Migrate PaymentAgent to FlowAgentBase,"Use stages array and handleAction pattern","high",CATTES-Phase3,completed,1.5,Claude
+CATTES-3-004,Backend,Migrate LegalAgent to FlowAgentBase,"Use stages array and handleAction pattern","high",CATTES-Phase3,completed,1.5,Claude
+CATTES-4-001,Testing,Write CATTES integration tests,"Test FileUploadNormalizer CanvasStateManager FlowAgentBase with real scenarios","high",CATTES-Phase4,completed,2,Claude
+CATTES-4-002,Testing,E2E testing of all agent flows,"Verify no regression in Selling Verification Payment Legal flows after migration","high",CATTES-Phase4,completed,2,Claude
+CATTES-4-003,Documentation,Update CATTES HLD with implementation details,"Document actual implementations and any deviations from plan","medium",CATTES-Phase4,completed,1,Claude
+CATTES-4-004,Testing,Performance benchmark before/after,"Measure response times to ensure no regression from abstraction overhead","medium",CATTES-Phase4,completed,1,Claude
+TECH-4-002,Feature,Secondary Market Implementation,"Build order book and fraction trading functionality - TradingAgent with CATTES pattern - ownership validation - settlement triggering","high",Phase 4,completed,10,Claude
+TECH-4-003,Feature,Advanced Analytics,"PortfolioAgent with CATTES - PortfolioAnalyticsService - ROI calculations - performance tracking - market trends","medium",Phase 4,completed,8,Claude
+TECH-4-001,Feature,Video Conferencing for Lawyer Verification,"Mock mode first - consider Daily.co/Twilio sandbox post-investment","low",Phase 4,pending,4,Claude
 TECH-5-001,Testing,Comprehensive Test Suite,"Unit and integration tests for all components","high",Phase 5,pending,16,Moshe Beeri
 TECH-5-002,Security,Security Audit,"Full security audit and penetration testing","critical",Phase 5,pending,12,Moshe Beeri
 TECH-6-001,Deployment,Production Deployment,"Deploy to production Firebase","critical",Phase 6,pending,8,Moshe Beeri
