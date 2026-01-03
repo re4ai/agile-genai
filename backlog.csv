@@ -72,3 +72,9 @@ TECH-5-001,Testing,Comprehensive Test Suite,"Unit and integration tests for all 
 TECH-5-002,Security,Security Audit,"Full security audit and penetration testing","critical",Phase 5,pending,12,Moshe Beeri
 TECH-6-001,Deployment,Production Deployment,"Deploy to production Firebase","critical",Phase 6,pending,8,Moshe Beeri
 TECH-6-002,Documentation,Complete Documentation,"API, agent workflow, and operational documentation","medium",Phase 6,pending,8,Moshe Beeri
+CATTES-2-001,Backend,Property Verification Agent - CATTES,"PropertyVerificationAgent extending FlowAgentBase with 3 stages for property ownership verification","high",CATTES,pending,4,Claude
+CATTES-2-002,Backend,Bank Verification Agent - CATTES,"BankVerificationAgent extending FlowAgentBase with 3 stages for bank account verification","high",CATTES,pending,4,Claude
+CATTES-2-003,Frontend,Property Verification Canvas - CATTES,"PropertyVerificationCanvas with real-time state sync for property document collection","high",CATTES,pending,3,Claude
+CATTES-2-004,Frontend,Bank Verification Canvas - CATTES,"BankVerificationCanvas with IBAN masking for bank details collection","high",CATTES,pending,3,Claude
+CATTES-2-005,Frontend,Verification Flow Routes - CATTES,"Routes and navigation between all 4 verification steps in seller flow","high",CATTES,pending,2,Claude
+CATTES-2-006,Testing,E2E Seller Verification Flow,"Test complete seller flow identity→property→bank→docs","medium",CATTES,pending,2,Claude
